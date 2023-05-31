@@ -10,6 +10,7 @@ def main():
     about_me = {
         # TODO: Put full name into data structure
         'name': 'Zack Robertson',
+        # TODO: Put list of 3 pizza toppings into data structure
         'pizza toppings': [
             'PEPPERONI',
             'PINEAPPLE',
@@ -17,18 +18,26 @@ def main():
         ],
         # TODO: Put student ID into data structure
         'studentID': '10207839',
-        # TODO: Put list of 3 pizza toppings into data structure
-        'movies':
+        'movies': [
             # TODO: Change this to a movie you like
             {
-                'title': 'The empire strikes back',
+                'title': 'Iron Man',
                 'genre': 'sci-fi'
             },
             # TODO: Add one more movie
+            {
+                'title': 'Idiocracy',
+                'genre': 'Comedy'
+            }
+            
+        ]
     }
 
     # Step 3: Print student name and ID
-    print_student_name_and_id(about_me)
+    Test_Name = str(about_me["name"]).split(',')
+    #Testname2 = Test_Name.split(' ')
+    print("My name is", about_me["name"], "\b, but you can call me Sir", Test_Name)
+    print("My student ID is", about_me["studentID"])
 
     # Step 4: Print a bullet list of pizza toppings
     print_pizza_toppings(about_me)
