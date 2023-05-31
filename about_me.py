@@ -34,13 +34,13 @@ def main():
     }
 
     # Step 3: Print student name and ID
-    Test_Name = str(about_me["name"]).split(',')
-    #Testname2 = Test_Name.split(' ')
-    print("My name is", about_me["name"], "\b, but you can call me Sir", Test_Name)
+    print("My name is", about_me["name"], "\b, but you can call me Sir", str(about_me["name"]).split(' ')[0])
     print("My student ID is", about_me["studentID"])
 
     # Step 4: Print a bullet list of pizza toppings
-    print_pizza_toppings(about_me)
+    print("My favorite pizza toppings are:")
+    for i in about_me['pizza toppings']:
+        print("-", i)
 
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
