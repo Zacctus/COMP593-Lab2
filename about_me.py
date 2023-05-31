@@ -34,8 +34,7 @@ def main():
     }
 
     # Step 3: Print student name and ID
-    print("My name is", about_me["name"], "\b, but you can call me Sir", str(about_me["name"]).split(' ')[0])
-    print("My student ID is", about_me["studentID"])
+    print_student_name_and_id(about_me)
 
     # Step 4: Print a bullet list of pizza toppings
     print("My favorite pizza toppings are:")
@@ -45,6 +44,7 @@ def main():
     # Step 5: Add pizza toppings to the data structure
     # TODO: Change to pizza toppings you like
     add_pizza_toppings(about_me, ['soylent green', 'racht'])
+
     print_pizza_toppings(about_me)
 
     # Step 6: Add another movie to the data structure
@@ -59,14 +59,14 @@ def main():
 
 def print_student_name_and_id(my_info):
     """Prints sentences containing student name and ID
-
     Args:
         my_info (dict): Data structure containing information about me
     """
     # TODO: Complete function body per Step 3
     # Print sentence containing name
     # Print sentence containing student ID
-    print()
+    print("My name is", about_me["name"], "\b, but you can call me Sir", str(about_me["name"]).split(' ')[0])
+    print("My student ID is", about_me["studentID"])
 
 def print_pizza_toppings(my_info):
     """Prints a bullet list of favourite pizza toppings
@@ -88,6 +88,7 @@ def add_pizza_toppings(my_info, toppings):
     """
     # TODO: Complete function body per Step 5
     # Append new pizza toppings to end of list 
+    about_me['pizza toppings'].append('Anchovies')
     # Convert all pizza toppings to lowercase
     # Sort toppings list alphabetically
     return
